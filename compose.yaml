@@ -1,0 +1,7 @@
+services:
+  backend:
+    build: ./app
+    ports:
+      - "80:8080"
+  frontend:
+    image: "node:20-alpine"
