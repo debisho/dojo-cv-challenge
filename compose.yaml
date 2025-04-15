@@ -5,7 +5,7 @@ services:
     ports:
       - "8000:8080"
   frontend:
-      build: ./backend
+      build: ./frontend
       container_name: frontend_react_app
       ports:
       - "3000:3000"
