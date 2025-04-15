@@ -1,19 +1,19 @@
 services:
   backend:
-    build: ./backend
-    container_name: fastapi
-    ports:
-      - "8000:8080"
+      build: ./backend
+      container_name: fastapi
+      ports:
+        - "8000:8080"
   frontend:
       build: ./frontend
       container_name: frontend_react_app
       ports:
-      - "3000:3000"
+        - "3000:3000"
   nginx:
-    build: ./nginx
-    container_name: nginx
-    ports:
-      - "80:80"
-    depends_on:
-      - backend
-      - frontend
+      build: ./nginx
+      container_name: nginx
+      ports:
+        - "80:80"
+      depends_on:
+        - backend
+        - frontend
